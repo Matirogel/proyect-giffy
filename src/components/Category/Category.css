@@ -1,0 +1,28 @@
+.trendsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.trends {
+   padding: 2px;
+   border: 2px solid rgb(225, 1, 55);
+   cursor: pointer;
+   font-size: 0.8em;
+   list-style: none;
+}
+
+.trends:hover {
+    transition-duration: 500ms;
+    color: rgb(300, 1, 55);
+    border: 2px solid rgb(225, 225, 225);
+}
+
+h3 {
+    font-size: 1.8rem;
+    text-align: right;
+}

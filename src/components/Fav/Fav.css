@@ -1,0 +1,15 @@
+.Fav {
+    background: rgba(255,150,150,.3);
+    color: rgba(255, 0, 43, 0.882);
+    cursor: pointer;
+    border: none;
+    border-radius: 100px;
+    font-size: 0.7em;
+    width: 32px;
+    height: 32px;
+    transition: all .3s ease;
+}
+
+.Fav:hover {
+    background: rgba(255,150,150,.9);
+} 

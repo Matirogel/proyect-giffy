@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ddf;
+    margin: 1rem;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}

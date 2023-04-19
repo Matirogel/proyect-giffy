@@ -1,0 +1,19 @@
+div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.gifsContainer {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 100px;
+    margin: 50px;
+}
+
+@media screen and (max-width: 620px ) {
+    .gifsContainer {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,28 @@
+.btn-next {
+    width: 5.5rem;
+    height: 3rem;
+    margin: 0rem auto;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: antiquewhite;
+    background-color: rgb(252, 18, 205);
+    cursor: pointer;
+}
+
+.btn-next:hover {
+    background-color: rgb(245, 170, 230);
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.search-container h2 {
+    color: #f0f0f0;
+    margin-top: 4rem;
+    text-align: center;
+}
