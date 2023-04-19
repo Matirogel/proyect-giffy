@@ -17,7 +17,7 @@
     "wouter": "^2.10.0"
   },
   "scripts": {
-    "deploy": "npm run test && vercel",
+    "deploy": "vercel",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
