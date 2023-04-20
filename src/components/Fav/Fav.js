@@ -1,25 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import useUser from "../../hooks/useUser";
 import Modal from "../Modal/Modal";
 import './Fav.css'
 import Login from "../Login/Login";
+import { useModal } from "../../hooks/useModal";
 
 export default function Fav ({ id }) {
     const { isLogged, addFav, favs } = useUser()
-    const [showModal, setShowModal] = useState(false)
+    const { showModal, setShowModal, handleClose} = useModal()
 
     let isFaved = false
     if (favs !== undefined) isFaved = favs.some(fav => fav === id)
-
-    const handleClick = () => {
+    
+    const handleClickFav = () => {
         if (!isLogged) return setShowModal(true)
         addFav({ id }) 
     }
-
-    const handleClose = () => {
-        setShowModal(false)
-    }
-
+    
     const [
         label,
         emoji
@@ -35,7 +32,7 @@ export default function Fav ({ id }) {
 
     return (
         <>
-            <button className="Fav" onClick={handleClick}>
+            <button className="Fav" onClick={handleClickFav}>
                 <span role='img' aria-label={label}>
                     {emoji}
                 </span>

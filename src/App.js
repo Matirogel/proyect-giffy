@@ -6,7 +6,6 @@ import Header from './components/Header/Header';
 import Search from './pages/Search/Search'
 import Detail from './pages/Detail/Detail'
 import Error404 from './pages/Error404'
-import Login from './pages/Login/Login'
 import Register from './pages/Register/Register';
 import MyFavs from './pages/MyFavs/MyFavs';
 
@@ -44,10 +43,6 @@ function App() {
                 <Route 
                   component={Detail}
                   path='/gif/:id'
-                />
-                <Route 
-                  component={Login}
-                  path='/login'
                 />
                 <Route 
                   component={Register}

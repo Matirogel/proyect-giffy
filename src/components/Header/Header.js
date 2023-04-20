@@ -1,12 +1,17 @@
 import React from "react";
 import { Link, useRoute } from "wouter";
-import './Header.css'
 import useUser from "../../hooks/useUser";
+import Modal from "../Modal/Modal";
+import Login from "../Login/Login";
+import { useModal } from "../../hooks/useModal";
+import './Header.css'
 
 export default function Header () {
     const { isLogged, logout, isLoadingUser } = useUser()
     const [match] = useRoute('/login')
     const [match1] = useRoute('/register')
+    const { showModal, setShowModal, handleClose, handleShow } = useModal()
+
 
     const renderButtons = ({ isLogged, isLoadingUser }) => {
         return isLoadingUser
@@ -14,12 +19,18 @@ export default function Header () {
             :   !isLogged 
                 
                 ?   <>
-                        <Link to='/login'>
+                        <Link to='/' onClick={handleShow}>
                             Login
                         </Link>
                         <Link to='/register'>
                             Register
                         </Link>
+                        {
+                            showModal && 
+                                <Modal onClose={handleClose}>
+                                    <Login setShowModal={setShowModal} />
+                                </Modal>
+                        }
                     </>
                 :   <>
                         <Link to='/' onClick={logout}>
@@ -29,6 +40,8 @@ export default function Header () {
                             Mis favs
                         </Link>
                     </>
+                
+                    
     } 
 
     const content = match || match1

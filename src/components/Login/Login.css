@@ -1,0 +1,18 @@
+.login-container {
+    position: relative;
+}
+
+.login-container h2 {
+    color: rgb(31, 29, 29);
+    font-size: 25px;
+    margin: 70px 0 35px 0
+}
+
+.login-form {
+    position: absolute;
+    width: 100%;
+}
+
+.login-form input {
+    width: 100%;
+}

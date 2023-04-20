@@ -6,7 +6,7 @@ function Modal ({ children, onClose }) {
     return (
         <div className="modal">
             <div className="modal-content">
-                <button className="btn" onClick={onClose}>✖</button>
+                <button className="btn-close-modal" onClick={onClose}>✖</button>
                 { children }
             </div>
         </div>

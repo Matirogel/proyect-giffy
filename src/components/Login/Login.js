@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { useLocation } from "wouter"
 import useUser from "../../hooks/useUser"
 import loginService from "../../services/loginService"
+import './Login.css'
 
 export default function Login ({ setShowModal }) {
     const [username, setUsername] = useState('')
@@ -34,8 +35,9 @@ export default function Login ({ setShowModal }) {
     
     return (
         <>
-            <section className="formContainer">
-                <form onSubmit={handleSubmit}>
+            <section className="login-container">
+                <h2>Login</h2>
+                <form className="login-form" onSubmit={handleSubmit}>
                     <input 
                         type="text" 
                         placeholder="Email" 
